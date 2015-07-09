@@ -13,7 +13,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import paquetePojos.Empleado;
 
-@WebServlet({"/GestionDB"})
+// Hacemos que se cargue en memoria el servlet automáticamente para crear la base de datos
+@WebServlet(urlPatterns={"/GestionDB"}, loadOnStartup=1)
 public class GestionDB extends HttpServlet {
     private static final long serialVersionUID = 1L;
     static Connection conexion;    
